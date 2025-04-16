@@ -1,38 +1,103 @@
-.App {
+/* Mobile.css */
+body, .app {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 10px;
+  background-color: #2e4d73;
+  margin: 0;
+}
+
+.app {
+  max-width: 480px;
+  margin: auto;
+  background-color: #418fa1;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+h1 {
   text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-controls {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+.top-controls input,
+.top-controls button,
+.top-controls select {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.top-controls button {
+  background-color: #5c6bc0;
   color: white;
+  font-weight: bold;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.task-list {
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-info {
+  flex-grow: 1;
+}
+
+.task-info small {
+  display: block;
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.actions button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.history {
+  margin-top: 20px;
+}
+
+.history h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  font-size: 0.9rem;
+  background: #eee;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
 }
